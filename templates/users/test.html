@@ -1,0 +1,41 @@
+<!-- 폼 테스트용 템플릿 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/users/auth/" method="POST">
+        로그인
+        {% csrf_token %}
+        <input name="user_id" />
+        <input name="password" />
+        <button type="submit">
+            제출
+        </button>
+    </form>
+
+    <form action="/users/register/" method="POST">
+        회원가입
+        {% csrf_token %}
+        <input name="user_id" />
+        <input name="password" />
+        <input name="user_type" />  
+        <button type="submit">
+            제출
+        </button>
+    </form>
+    <form action="/users/change_password/" method="POST">
+        비밀번호변경
+        {% csrf_token %}
+        <input name="password1" />
+        <input name="password2" />  
+        <button type="submit">
+            제출
+        </button>
+    </form>
+</body>
+</html>

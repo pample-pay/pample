@@ -1,0 +1,5 @@
+secrets.json
+AWS_secrets.json
+
+db.sqlite3
+migrations/
